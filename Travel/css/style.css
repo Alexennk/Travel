@@ -484,12 +484,34 @@ html {
 /* header styles start */
 
 .header {
+    position: absolute;
     background-color: rgba(242, 120, 92, 0.7);
-    position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
+ } 
+
+ .header-logo-box {
+    display: flex;
+    align-items: center;
+ }
+
+ .header-logo-text {
+    margin-left: 6px;
+    font-family: 'Magra';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 39px;
+    color: #fff;
+ }
+ 
+ .header-logo-link {
+    text-decoration: none;
+    transition: 0.5s;
+ }
+
+ .header-logo-link:hover {
+    transform: scale(1.1);
  }
 
  .header-link {
@@ -501,6 +523,7 @@ html {
     color: #fff;
     text-decoration: none;
     margin-right: 42px;
+    transition: .2s;
  }
 
  .header-link:hover, .header-link:focus, .header-link:active {
@@ -539,6 +562,11 @@ html {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 3px rgba(13, 96, 111, 0.16);
     border-radius: 10px;
     border: none;
+    transition: .5s;
+ }
+
+ .header-button:hover {
+    transform: scale(1.1);
  }
 
  /* header styles end */
@@ -550,6 +578,7 @@ html {
     background: url(../img/intro-bg.jpg) no-repeat center;
     background-size: cover;
     padding-top: 122px;
+    margin-bottom: 80px;
 }
 
 .intro-title {
@@ -607,7 +636,8 @@ html {
 }
 
 .search-button {
-    padding: 13.5px 32.5px;
+    height: 59px;
+    width: 228px;
     font-family: 'Red Hat Text';
     font-style: normal;
     font-weight: 500;
@@ -618,6 +648,264 @@ html {
     box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
     border-radius: 10px;
     border: none;
+    transition: .5s;
 }
 
- /* intro styles end */
+.search-button:hover {
+    transform: scale(1.05);
+}
+
+/* intro styles end */
+
+
+/* steps styles start */
+
+.steps-title {
+    margin-bottom: 40px;
+    text-align: center;
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 53px;
+    color: #F2785C;
+}
+
+.steps-cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.steps-card-pic {
+    width: 100px;
+    margin: 0 auto;
+    transition: .5s;
+}
+
+.steps-card-pic:hover {
+ transform: scale(1.1);
+}
+
+.steps-card-text {
+    margin-top: 40px;
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #0D606F;
+}
+
+.steps {
+    margin-bottom: 97px;
+}
+
+/* steps styles end */
+
+
+
+/* popular destinations styles start */
+
+.destinations-title {
+    margin-bottom: 46px;
+    text-align: center;
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 53px;
+    color: #F2785C;
+}
+
+.destinations-pics {
+    width: 100%;
+    margin-bottom: 85px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.destinations-pic-usa, .destinations-pic-japan, .destinations-pic-spain {
+    border-radius: 16px;
+    border: none;
+    width: 400px;
+}
+
+.destinations-pic-1, .destinations-pic-2, .destinations-pic-3 {
+    position: relative;
+}
+
+.destinations-text-1, .destinations-text-2, .destinations-text-3 {
+    position: absolute;
+    left: 15px;
+    bottom: 40px;
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 42px;
+    color: #fff;
+}
+
+.destinations-button-box {
+    margin-bottom: 80px;
+}
+
+.button { 
+    display: block; 
+    margin: 0 auto;
+    padding: 10px 32px 10px 32px;
+
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    color: #fff;
+
+    background: #0D606F;
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    border: none;
+
+    transition: .5s;
+}
+
+.button:hover {
+    transform: scale(1.05);
+}
+
+.button-contents {
+    display: flex;
+    align-items: center;
+}
+
+.button-arrow {
+    margin-right: 10px;
+}
+
+/* popular destinations styles end */
+
+
+/* travel stories styles start */
+
+.stories-title {
+    margin-bottom: 40px;
+    text-align: center;
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 53px;
+    color: #F2785C;
+}
+
+.stories-and-footer {
+    background: url(../img/stories_footer-bg.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.stories {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.stories-cards {
+    display: flex;
+    flex-direction: column;
+}
+
+.story-card {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.stories-pic {
+    margin-right: 40px;
+    filter: drop-shadow(0px 4px 4px #0D606F);
+    border-radius: 16px;
+}
+
+.story-card-text {
+    max-width: 760px;
+}
+
+.story-card-title {
+    margin-bottom: 24px;
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 42px;
+    color: #0D606F;
+}
+
+.story-card-par {
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #0D606F;
+}
+
+.story-card-ref {
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-decoration-line: underline;
+    color: #0D606F;
+}
+
+.story-card-ref:hover, .story-card-ref:focus, .story-card-ref:active {
+    opacity: .75;
+}
+
+/* travel stories styles end */
+
+
+/* footer styles begin */
+
+.footer {
+    background: none; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 13px 0;
+}
+
+.footer-text {
+    margin-left: 455px;
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #fff;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.footer-icon-link {
+    margin-right: 20px;
+    transition: .3s;
+}
+
+.footer-icon-link:hover {
+    transform: scale(1.1);
+} 
+
+.footer-links:last-child {
+    margin-right: 0;
+}
+
+/* footer styles end */
