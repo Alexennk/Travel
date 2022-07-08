@@ -892,6 +892,11 @@ html {
     filter: drop-shadow(0px 4px 4px #0D606F);
     border-radius: 16px;
     max-height: 300px;
+    transition: .5s;
+}
+
+.stories-pic:hover {
+    transform: scale(1.05);
 }
 
 .story-card-text {
@@ -1122,8 +1127,9 @@ html {
     .steps-card-text {
         margin: 0 20px;
     }
-    .html {
-        overflow-x: hidden;
+    .intro-title {
+        font-size: 60px;
+        line-height: 72px;
     }
 }
 
