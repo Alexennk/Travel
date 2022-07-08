@@ -3,11 +3,27 @@
 (function() {
     const burgerItem = document.querySelector('.burger');
     const menu = document.querySelector('.header-nav');
-    const menuCloseItem = document.querySelector('.header-nav-close')
+    const menuCloseItem = document.querySelector('.header-nav-close');
+    const menuCloseRef1 = document.querySelector('.header-ref-1');
+    const menuCloseRef2 = document.querySelector('.header-ref-2');
+    const menuCloseRef3 = document.querySelector('.header-ref-3');
+    const menuCloseRef4 = document.querySelector('.header-ref-4');
     burgerItem.addEventListener('click',  () => {
         menu.classList.add('header-nav-active');
     });
     menuCloseItem.addEventListener('click',  () => {
+        menu.classList.remove('header-nav-active');
+    });
+    menuCloseRef1.addEventListener('click',  () => {
+        menu.classList.remove('header-nav-active');
+    });
+    menuCloseRef2.addEventListener('click',  () => {
+        menu.classList.remove('header-nav-active');
+    });
+    menuCloseRef3.addEventListener('click',  () => {
+        menu.classList.remove('header-nav-active');
+    });
+    menuCloseRef4.addEventListener('click',  () => {
         menu.classList.remove('header-nav-active');
     });
 }());
