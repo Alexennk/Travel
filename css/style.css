@@ -472,10 +472,6 @@ html {
     box-sizing: inherit;
 }
 
-.body {
-    max-width: 1440px;
-}
-
 .wrapper {
     max-width: 1180px;
     margin: 0 auto;
@@ -492,6 +488,7 @@ html {
 } 
 
 .header-logo-box {
+    margin-top: 10px;
     margin-left: 20px;
     margin-right: 20px;
     display: flex;
@@ -542,7 +539,6 @@ html {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    /* height: 90px; */
 }
 
 .header-list {
@@ -583,8 +579,8 @@ html {
 
 .header-burger {
     display: none;
-    width: 40px;
-    height: 30px;
+    width: 35px;
+    height: 25px;
     position: relative;
     margin-right: 20px;
 }
@@ -592,7 +588,7 @@ html {
 .burger-line {
     display: block;
     width: 100%;
-    height: 3px;
+    height: 2px;
     position: absolute;
     right: 0;
     background-color: #fff;;
@@ -742,6 +738,7 @@ html {
 }
 
 .steps-card-text {
+    text-align: center;
     margin-top: 40px;
     font-family: 'Aleo';
     font-style: normal;
@@ -785,12 +782,13 @@ html {
 }
 
 .destinations-pic-usa, .destinations-pic-japan, .destinations-pic-spain {
+    max-width: 400px;
     border-radius: 16px;
     border: none;
-    width: 400px;
 }
 
 .destinations-pic-1, .destinations-pic-2, .destinations-pic-3 {
+    max-width: 400px;
     position: relative;
     margin: 20px;    
     transition: .5s;
@@ -820,19 +818,16 @@ html {
     display: block; 
     margin: 0 auto;
     padding: 10px 32px 10px 32px;
-
     font-family: 'Red Hat Text';
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
     line-height: 32px;
     color: #fff;
-
     background: #0D606F;
     box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
     border-radius: 10px;
     border: none;
-
     transition: .5s;
 }
 
@@ -1051,7 +1046,6 @@ html {
         position: absolute;
         background-color: #fff;
         top: 50%;
-        
     }
     .header-nav-close {
         transition: .2s;
@@ -1140,13 +1134,16 @@ html {
     }
     .search-form {
         justify-content: baseline;
-        max-width: 892px;
         padding-top: 10px;
         padding-bottom: 10px; 
     }
     .search-line {
+        max-width: 300px;
         margin-left: 15px;
         margin-right: 41px;
+        font-size: 14px;
+    }
+    .search-line::placeholder {
         font-size: 14px;
     }
     .search-button {
@@ -1185,6 +1182,55 @@ html {
         height: 50px;
         width: 135px;
         font-size: 28px;
+    }
+    .destinations-pic-usa, .destinations-pic-japan, .destinations-pic-spain {
+        max-width: 250px;
+    }
+    
+    .destinations-pic-1, .destinations-pic-2, .destinations-pic-3 {
+        max-width: 250px;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    .search-line {
+        max-width: 200px;
+        margin-left: 15px;
+        margin-right: 41px;
+        font-size: 14px;
+    }
+    .search-form {
+        max-width: 250px;
+        justify-content: baseline;
+        padding-top: 10px;
+        padding-bottom: 10px; 
+    }
+    .header-logo-text {
+        margin-left: 6px;
+        font-family: 'Magra';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 25px;
+    }
+    .destinations-title {
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .stories-title {
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .steps-title {
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .footer-text {
+        font-size: 12px;
+        text-align: left;
+        margin-left: 10px;
+        margin-right: 70px;
+        max-width: 120px;
     }
 }
 /* Media end */
