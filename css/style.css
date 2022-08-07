@@ -465,7 +465,7 @@ textarea {
 
 html {
     box-sizing: border-box;
-
+    overflow-x: hidden;
 }
 
 *, *::before, *::after {
@@ -606,6 +606,191 @@ html {
 .burger-line-third  {
     bottom: 0;
 }
+
+
+/* login styles start */
+
+.login-box {
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    width: 500px;
+    top: 50%;
+    left: 50%;
+    margin: -278px 0 0 -250px;
+    z-index: 100;
+    padding: 20px;
+
+    background: linear-gradient(177.09deg, #FFFFFF 6.15%, #0D606F 202.69%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+}
+
+.login-box.open {
+    transition: .2s visibility linear, .2s opacity linear;
+    visibility: visible;
+    opacity: 1;
+}
+
+.login-title {
+    text-align: center;
+    margin-bottom: 20px;
+
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    color: #0D606F;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-element {
+    margin-bottom: 15px;
+}
+
+.login-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 10px;
+}
+
+.login-facebook-button {
+    background: #1877F2;
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border: none;
+    border-radius: 10px;
+}
+
+.login-facebook-button-text {
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    color: #FFFFFF;
+}
+
+.login-google-button {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    border: none;
+}
+
+.login-google-button-text {
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    color: #0D606F;
+}
+
+.login-button-icon {
+    margin-right: 10px;
+}
+
+.login-form-or-line {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 10px 0;
+}
+
+.login-form-line {
+    height: 1px;
+    width: 50%;
+    background-color: rgba(13, 96, 111, 0.5);
+    margin-top: 3px;
+}
+
+.login-form-or-text {
+    margin: 0 20px;
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: rgba(13, 96, 111, 0.5);
+}
+
+label {
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #0D606F;
+}
+
+.login-form-input {
+    margin-bottom: 20px;
+    height: 46px;
+    background: #FFFFFF;
+    box-shadow: inset 0px 0px 3px rgba(13, 96, 111, 0.08), inset 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    border: none;
+}
+
+.login-sign-in-button {
+    height: 46px;
+    margin-bottom: 10px;
+    background: #0D606F;
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    border: none;
+
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    color: #FFFFFF;
+}
+
+.login-form-ref, .login-form-register-ref {
+    text-align: center;
+
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    text-decoration-line: underline;
+    color: #0D606F;
+    text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+}
+
+.login-form-empty-line {
+    height: 1px;
+    width: 100%;
+    background-color: rgba(13, 96, 111, 0.5);
+    margin-top: 20px;
+}
+
+.login-form-register-ref-box {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    /* identical to box height */
+    color: rgba(13, 96, 111, 0.5);
+    text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+}
+
+/* login end start */
+
 
  /* header styles end */
 
@@ -775,30 +960,42 @@ html {
 
 .destinations-pics {
     max-width: 100%;
-    margin-bottom: 85px;
+    margin-bottom: 20px;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-around;
 }
 
-.destinations-pic-usa, .destinations-pic-japan, .destinations-pic-spain {
-    max-width: 400px;
+.destinations-pic-country {
+    max-width: 600px;
     border-radius: 16px;
     border: none;
 }
 
-.destinations-pic-1, .destinations-pic-2, .destinations-pic-3 {
-    max-width: 400px;
+.destinations-pic {
+    max-width: 600px;
     position: relative;
     margin: 20px;    
     transition: .5s;
 }
 
-.destinations-pic-1:hover, .destinations-pic-2:hover, .destinations-pic-3:hover {
-    transform: scale(1.1);
+.order-1 {
+    order: 1;
 }
 
-.destinations-text-1, .destinations-text-2, .destinations-text-3 {
+.order-2 {
+    order: 2;
+}
+
+.order-3 {
+    order: 3;
+}
+
+.destinations-pic:hover {
+    transform: scale(1.03);
+}
+
+.destinations-text {
     position: absolute;
     left: 15px;
     bottom: 40px;
@@ -810,7 +1007,33 @@ html {
     color: #fff;
 }
 
+.dot-1, .dot-2, .dot-3 {
+    cursor: pointer;
+    height: 18px;
+    width: 18px;
+    margin: 0 2px;
+    background-color: #F2785C;
+    opacity: .6;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.dot-1:hover, .dot-2:hover, .dot-3:hover {
+    opacity: 1;
+    transition: .2s;
+}
+
+.destinations-dots {
+    text-align: center;
+}
+
+.dot-2 {
+    opacity: 1;
+}
+
 .destinations-button-box {
+    margin-top: 40px;
     margin-bottom: 80px;
 }
 
@@ -978,7 +1201,7 @@ html {
 /* footer styles end */
 
 
-/* Media start */
+/* Media request start */
 
 @media screen and (max-width: 915px) {
     .header-burger {
@@ -1086,6 +1309,20 @@ html {
     .steps-card {
         margin-bottom: 20px;  
     } 
+
+    .destinations-pic-country {
+        max-width: 400px;
+    }
+    
+    .destinations-pic {
+        max-width: 400px;
+    }
+    .destinations-text {
+        left: 12px;
+        bottom: 36px;
+        font-size: 32px;
+        line-height: 38px;
+    }
 }
 
 @media screen and (max-width: 1080px) {
@@ -1111,10 +1348,6 @@ html {
 }
 
 @media screen and (max-width: 860px) {
-    .destinations-pic-1, .destinations-pic-2, .destinations-pic-3 {
-        margin: 20px auto;
-        max-width: 100%;
-    }
     .steps-cards {
         justify-content: center;
     }
@@ -1158,6 +1391,23 @@ html {
         margin-left: 10px;
         margin-right: 120px;
         max-width: 200px;
+    }
+    .destinations-pic-country {
+        max-width: 300px;
+    }
+    .destinations-pic {
+        max-width: 300px;
+        margin: 15px;
+    }
+    .destinations-text {
+        left: 12px;
+        bottom: 32px;
+        font-size: 28px;
+        line-height: 36px;
+    }
+    .login-box {
+        width: 400px;
+        margin-left: -200px;
     }
 }
 
@@ -1240,11 +1490,32 @@ html {
         width: 135px;
         font-size: 28px;
     }
-    .destinations-pic-usa, .destinations-pic-japan, .destinations-pic-spain {
-        max-width: 250px;
+    .destinations-pic-country {
+        max-width: 200px;
+    }
+    .destinations-pic {
+        max-width: 200px;
+        margin: 10px;
+    }
+    .destinations-text {
+        left: 10px;
+        bottom: 32px;
+        font-size: 26px;
+        line-height: 32px;
+    }
+    .button-dest {
+        padding: 5px 16px;
+        font-size: 20px;
+        line-height: 24px;
+    }
+    .button-arrow {
+        max-width: 32px;
+    }
+    .login-box {
+        width: 300px;
+        margin-left: -150px;
     }
 }
-
 @media screen and (max-width: 300px) {
     .search-line {
         max-width: 160px;
@@ -1269,8 +1540,8 @@ html {
         font-family: 'Magra';
         font-style: normal;
         font-weight: 600;
-        font-size: 22px;
-        line-height: 25px;
+        font-size: 20px;
+        line-height: 20px;
     }
     .destinations-title {
         font-size: 28px;
@@ -1297,8 +1568,21 @@ html {
         font-size: 14px;
         margin-left: 0;
     }
-    .destinations-pic-usa, .destinations-pic-japan, .destinations-pic-spain {
-        max-width: 180px;
+    .destinations-pic-country {
+        max-width: 150px;
+    }
+    .destinations-pic {
+        max-width: 150px;
+    }
+    .destinations-text {
+        left: 8px;
+        bottom: 24px;
+        font-size: 24px;
+        line-height: 28px;
+    }
+    .login-box {
+        width: 250px;
+        margin-left: -125px;
     }
 }
-/* Media end */
+/* Media request end */

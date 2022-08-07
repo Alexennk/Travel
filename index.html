@@ -62,6 +62,57 @@
 
             </div>
         </div>
+
+
+        <div class="login-box" id="login-box">
+            <h3 class="login-title">
+                Log in to your account
+            </h3>
+
+            <form action="" class="login-form">        
+                <button type="submit" class="login-element login-facebook-button">
+                    <div class="login-button login-facebook-button-contents">
+                        <img src="./img/svg/facebook.svg" alt="Facebook icon" class="login-button-icon login-facebook-button-icon">
+                        <p class="login-facebook-button-text">
+                            Sign In with Facebook
+                        </p>
+                    </div>
+                </button>    
+                <button type="submit" class="login-element login-google-button">
+                    <div class="login-button login-google-button-contents">
+                        <img src="./img/svg/google.svg" alt="Google icon" class="login-button-icon login-google-button-icon">
+                        <p class="login-google-button-text">
+                            Sign In with Google
+                        </p>
+                    </div>
+                </button>    
+                <div class="login-form-or-line">
+                    <span class="login-form-line"></span>
+                    <p class="login-form-or-text">
+                        or
+                    </p>
+                    <span class="login-form-line"></span>
+                </div>
+                <label for="login-form-e-mail" >E-mail</label>
+                <input type="text" class="login-form-input" id="login-form-e-mail">
+                <label for="login-form-password">Password</label>
+                <input type="text" class="login-form-input" id="login-form-password">
+                <button type="submit" class="login-sign-in-button">
+                    Sign In
+                </button>
+                <a href="" class="login-form-ref">
+                    Forgot Your Password?
+                </a>
+                <span class="login-form-empty-line"></span>
+                <div class="login-form-register-ref-box">
+                    <p class="login-form-register-text">Don't have an account?</p>
+                    <a href="#login-box" class="login-form-register-ref" onclick="registerRefClicked()">
+                        Register
+                    </a>
+                </div>
+            </form>
+        </div>
+
     </header>
 
     <main class="main">
@@ -133,23 +184,29 @@
             </h2>
             
             <div class="destinations-pics">
-                <div class="destinations-pic-1">
-                    <img src="./img/destinations-usa.jpg" alt="Destination USA" class="destinations-pic-usa">
-                    <p class="destinations-text-1">USA</p>
+                <div class="destinations-pic order-1">
+                    <img src="./img/destinations-usa.jpg" alt="Destination USA" class="destinations-pic-country">
+                    <p class="destinations-text">USA</p>
                 </div>
-                <div class="destinations-pic-2">
-                    <img src="./img/destinations-japan.jpg" alt="Destination Japan" class="destinations-pic-japan">
-                    <p class="destinations-text-2">JAPAN</p>
+                <div class="destinations-pic order-2">
+                    <img src="./img/destinations-japan.jpg" alt="Destination Japan" class="destinations-pic-country">
+                    <p class="destinations-text">JAPAN</p>
                 </div>
-                <div class="destinations-pic-3">
-                    <img src="./img/destinations-spain.jpg" alt="Destination Spain" class="destinations-pic-spain">
-                    <p class="destinations-text-3">SPAIN</p>
+                <div class="destinations-pic order-3">
+                    <img src="./img/destinations-spain.jpg" alt="Destination Spain" class="destinations-pic-country">
+                    <p class="destinations-text">SPAIN</p>
                 </div>
+            </div>
+
+            <div class="destinations-dots">
+                <span class="dot-1"></span>
+                <span class="dot-2"></span>
+                <span class="dot-3"></span>
             </div>
 
             <div class="destinations-button-box">
                 <form action="#">
-                    <button class="button">
+                    <button class="button button-dest">
                         <div class="button-contents">
                             <img src="./img/svg/button-arrow.svg" alt="Arrow" class="button-arrow">
                             Find More
